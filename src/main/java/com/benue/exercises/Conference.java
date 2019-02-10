@@ -29,7 +29,7 @@ public class Conference {
 	 */
 	private void init(List<String> talksStrings) {
 
-		this.talks 			= new Talks(talksStrings);
+		this.talks 		= new Talks(talksStrings);
 		int numberOfTracks 	= talks.getTrackCount();
 		this.tracks 		= new Track[numberOfTracks];
 
@@ -44,7 +44,7 @@ public class Conference {
 	 */
 	void schedule() {
 
-		int trackCount 			= talks.getTrackCount();
+		int trackCount 		= talks.getTrackCount();
 		List<Talk> talksList 	= talks.getTalks();
 
 		for (Talk talk : talksList) {
@@ -94,7 +94,7 @@ public class Conference {
 	List<String> getConferenceSchedule() {
 
 		List<String> schedule 	= new ArrayList<>();
-		int trackCount 			= talks.getTrackCount();
+		int trackCount 		= talks.getTrackCount();
 
 		IntStream.range(0, trackCount).forEach(i -> {
 			schedule.add("Track " + (i + 1) + ":\n");
