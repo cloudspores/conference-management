@@ -30,8 +30,8 @@ public class ScheduleReader {
 		try (Stream<String> stream = Files.lines(Paths.get(inputFilePathname))) {
 
 			return stream
-					.filter(line -> !("".equals(line)))		// Filter out any empty string lines
-					.peek(ScheduleReader::validateLine)		// Validate format of line - throw exception if invalid line
+					.filter(line -> !("".equals(line)))	// Filter out any empty string lines
+					.peek(ScheduleReader::validateLine)	// Validate format of line - throw exception if invalid line
 					.collect(Collectors.toList());          // Stash results into List of Strings
 		} catch (IOException e) {
 			throw new RuntimeException(e);
