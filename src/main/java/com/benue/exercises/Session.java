@@ -71,15 +71,15 @@ class Session {
 		for (Talk talk : talks) {
 
 			result.append(Time.minutes2HoursMinutes(start))
-				  .append(' ')
-				  .append(talk.getTitle())
+			      .append(' ')
+			      .append(talk.getTitle())
 			      .append(' ');
 
 			if (talk.isLightning()) {
-				result.append("lightning\n");
+			    result.append("lightning\n");
 			}
 			else {
-				result.append(talk.getDuration()).append("min\n");
+			    result.append(talk.getDuration()).append("min\n");
 			}
 
 			start += talk.getDuration();
@@ -99,7 +99,7 @@ class Session {
 		private final int sessionStartTime;
 
 		SessionType(int sessionStartTime) {
-			this.sessionStartTime=sessionStartTime;
+		    this.sessionStartTime=sessionStartTime;
 		}
 
 		private int sessionStartTime() { return sessionStartTime; }
